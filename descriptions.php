@@ -923,7 +923,7 @@ $synonyms = array("QR code","bank account","net banking","online banking","inter
 
 
 
-function powerSet($in,$subqu,$synonyms,$minLength = 1) { 
+function permute_array($in,$subqu,$synonyms,$minLength = 1) { 
    $count = count($in); 
    $members = pow(2,$count); 
    $return = array(); 
@@ -990,7 +990,7 @@ function powerSet($in,$subqu,$synonyms,$minLength = 1) {
 
 		 $num_words = count($words);
 
-		 $word_comb=powerSet($words,$subqu,$synonyms);
+		 $word_comb=permute_array($words,$subqu,$synonyms);
 
 
 
